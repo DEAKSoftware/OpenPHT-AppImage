@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+
+export LD_LIBRARY_PATH="${SCRIPT_PATH}/../lib/openpht/system/players/dvdplayer":$LD_LIBRARY_PATH
+
+export XBMC_HOME=${SCRIPT_PATH}/../share/openpht
+
+exec ${SCRIPT_PATH}/../lib/openpht/plexhometheater "$@"

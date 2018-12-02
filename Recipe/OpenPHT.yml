@@ -1,0 +1,16 @@
+app: OpenPHT
+  binpatch: true
+
+ingredients:
+  dist: xenial
+  sources:
+    - deb http://security.ubuntu.com/ubuntu/ xenial main universe
+    - deb http://archive.ubuntu.com/ubuntu/ xenial main universe
+  ppas:
+    - team-xbmc/ppa
+    - team-xbmc/xbmc-nightly
+  script:
+    - wget -c https://github.com/RasPlex/OpenPHT/releases/download/v1.8.0.148-573b6d73/openpht_1.8.0.148-573b6d73-xenial_amd64.deb
+script:
+  # Replace original openpht script with the modified version that works with relative paths
+  - cp ../../../Recipe/openpht ./usr/bin/
