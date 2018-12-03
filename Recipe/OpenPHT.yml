@@ -1,5 +1,5 @@
 app: OpenPHT
-  binpatch: true
+  # binpatch: true
 
 ingredients:
   dist: xenial
@@ -12,5 +12,5 @@ ingredients:
   script:
     - wget -c https://github.com/RasPlex/OpenPHT/releases/download/v1.8.0.148-573b6d73/openpht_1.8.0.148-573b6d73-xenial_amd64.deb
 script:
-  # Replace original openpht script with the modified version that works with relative paths
+  # Replace original openpht shell script with the modified version that works with relative paths
   - cp ../../../Recipe/openpht ./usr/bin/
