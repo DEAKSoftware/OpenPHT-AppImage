@@ -35,9 +35,9 @@ File or Directory | Description
 
 ### OpenPHT Configuration
 
-If OpenPHT runs without issues, it will automatically create its default configuration data at the path `~/.plexht`. One can also migrate an existing OpenPHT configuration data over by completely replacing the contents of `~/.plexht` with the another. 
+If OpenPHT runs without issues, it will automatically create its default configuration data at the path `~/.plexht`. One can also migrate an existing OpenPHT configuration data over by completely replacing the contents of `~/.plexht` with the other one. 
 
-Once the configuration files were copied over, edit the file `~/.plexht/userdata/guisettings.xml` and create a new name and a new UUID for the OpenPHT instance. Search for the `<devicename>` tags and change it to whatever appropriate; the computer name is usually sufficient:
+Once the configuration files were copied over, edit the file `~/.plexht/userdata/guisettings.xml` and create a new device name and a new UUID for the OpenPHT instance. Search for the `<devicename>` tags and change it to whatever appropriate; the computer name is usually sufficient:
 
 ```xml
 <devicename>Foobar</devicename>
@@ -48,7 +48,7 @@ Likewise, one must search for the `<uuid>` tags, as shown below, and change it t
 ```xml
 <uuid>0000000-0000-0000-0000-000000000000</uuid>
 ```
-**Note:** The UUID must never clash with any of the other Plex compatible devices on the network, that is why we must change it. New IDs can be created with the [Online UUID Generator](https://www.uuidgenerator.net/version4). 
+**Note:** The UUID must never clash with any of the other Plex compatible devices on the network; hence the reason why it must be changed. New IDs can be created with the [Online UUID Generator](https://www.uuidgenerator.net/version4). 
 
 ### Disclaimers and Legal
 
