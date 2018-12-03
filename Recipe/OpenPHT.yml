@@ -1,5 +1,4 @@
 app: OpenPHT
-  # binpatch: true
 
 ingredients:
   dist: xenial
