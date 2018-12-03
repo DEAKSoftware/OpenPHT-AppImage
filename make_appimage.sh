@@ -2,10 +2,8 @@
 
 mkdir Build; cd Build
 
-wget -c https://raw.githubusercontent.com/AppImage/AppImages/master/pkg2appimage
+wget -c https://raw.githubusercontent.com/AppImage/AppImages/master/pkg2appimage | exit 1
 
-chmod 766 pkg2appimage
+chmod 766 pkg2appimage | exit 1
 
 ./pkg2appimage ../Recipe/OpenPHT.yml
-
-# ./out/OpenPHT-1.8.0.148.glibc2.15-x86_64.AppImage
