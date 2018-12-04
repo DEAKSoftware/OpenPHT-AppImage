@@ -27,7 +27,7 @@ File or Directory | Description
 
 ### Making an `.AppImage` Package
 
-1. Run the `./make_appimage.sh` utility to fetch the OpenPHT `.deb` and its dependencies. Hopefully all dependencies can be resolved.
+1. Run the `./make_appimage.sh` utility to fetch the OpenPHT `.deb` package and its dependencies. Hopefully all dependencies can be resolved.
 
 2. Find the output file at `./Build/out/OpenPHT*.AppImage` and copy it to a [location of your choice](https://docs.appimage.org/user-guide/faq.html#question-where-do-i-store-my-appimages).
 
