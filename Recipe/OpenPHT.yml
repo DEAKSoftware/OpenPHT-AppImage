@@ -14,3 +14,12 @@ ingredients:
 script:
   # Replace original openpht shell script with the modified version that works with relative paths
   - cp ../../../Recipe/openpht ./usr/bin/
+
+  # Replace some old XBMC icons with OpenPHT logo
+  - cp ../../../Recipe/icon32x32.png ./usr/share/openpht/media/
+  - cp ../../../Recipe/icon-flat-120x120.png ./usr/share/openpht/media/
+  - cp ../../../Recipe/icon-flat-256x256.png ./usr/share/openpht/media/
+  - cp ../../../Recipe/icon-flat-256x256.png ./usr/share/openpht/media/AppIcon.png
+  - cp ../../../Recipe/icon-flat-256x256.png ./usr/share/openpht/media/icon.png
+
+
