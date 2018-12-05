@@ -6,4 +6,6 @@ wget -c https://raw.githubusercontent.com/AppImage/AppImages/master/pkg2appimage
 
 chmod 766 pkg2appimage || exit 1
 
+clear
+
 ./pkg2appimage ../Recipe/OpenPHT.yml
