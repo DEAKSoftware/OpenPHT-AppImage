@@ -33,22 +33,24 @@ File or Directory | Description
 
 3. As a test, run the `OpenPHT*.AppImage` executable from a terminal, and watch the terminal output for error messages. If the app does not run, the most likely reason will be related to a library missing from the `.AppImage` package. Make an issue on this repo, and we'll see what we can do about it.
 
-### OpenPHT Configuration
+### Migrating OpenPHT Configuration
 
-If OpenPHT runs without issues, it will automatically create its default configuration data at the path `~/.plexht`. One can also migrate an existing OpenPHT configuration data over by completely replacing the contents of `~/.plexht` with the other one.
+This section might be useful to you if you plan to migrate OpenPHT configuration data to your Linux platform. Otherwise, you can skip this section and run OpenPHT with default settings.
 
-Once the configuration files were copied over, edit the file `~/.plexht/userdata/guisettings.xml` and create a new device name and a new UUID for the OpenPHT instance. Search for the `<devicename>` tags and change it to whatever appropriate; the computer name is usually sufficient:
+1. If OpenPHT was first run without issues, it will automatically create its default configuration data at the path `~/.plexht`. To migrate an existing OpenPHT configuration data over, close OpenPHT, then simply copy and replace the contents of `~/.plexht` with the other one.
 
-```xml
-<devicename>Foobar</devicename>
-```
+2. Once the configuration files were copied over, edit the file `~/.plexht/userdata/guisettings.xml` and create a new device name for the OpenPHT instance. Search for the `<devicename>` tags and change it to whatever appropriate; the computer name is usually sufficient:
 
-Likewise, one must search for the `<uuid>` tags, as shown below (where `X` denotes hex digits), and change it to something unique.
+	```xml
+	<devicename>Foobar</devicename>
+	```
 
-```xml
-<uuid>XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</uuid>
-```
-**Note:** The UUID must never clash with any of the other Plex compatible devices on the network; hence the reason why it must be changed. New IDs can be created with the [Online UUID Generator](https://www.uuidgenerator.net/version4).
+3. Likewise the UUID for the OpenPHT instance must be also changed. Search for the `<uuid>` tags, as shown below (where `X` denotes hex digits), and change it to something unique. New IDs can be created with the [Online UUID Generator](https://www.uuidgenerator.net/version4).
+
+	```xml
+	<uuid>XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</uuid>
+	```
+	**Note:** The UUID must never clash with any of the other Plex compatible devices on the network; hence the reason why we must change it.
 
 ### Disclaimers and Legal
 
