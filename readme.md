@@ -6,9 +6,9 @@
 
 This project will attempt to convert an [OpenPHT](https://github.com/RasPlex/OpenPHT) binary release, packaged in the `.deb` format, into an [`.AppImage` package](https://appimage.org/).
 
-The OpenPHT project is not actively maintained these days, and its [binary releases](https://github.com/RasPlex/OpenPHT/releases/tag/v1.8.0.148-573b6d73) are only limited to just a few old Linux distributions, which may no longer run on newer distributions. Rebuilding OpenPHT from sources is also quite challenging, as the project depends on a lot of third-party libraries, some of which are no longer compatible with OpenPHT 1.8.0.
+The OpenPHT project is not actively maintained these days, and its [binary releases](https://github.com/RasPlex/OpenPHT/releases/tag/v1.8.0.148-573b6d73) target only a few old Linux distributions, which may no longer install on newer distributions. Rebuilding OpenPHT from sources is also quite challenging, as the project depends on a lot of third-party libraries, some of which are no longer backwards compatible with OpenPHT 1.8.0.
 
-We will be using the [`pkg2appimage`](https://docs.appimage.org/packaging-guide/converting-binary-packages/pkg2appimage.html) script, provided by the AppImage project, to perform the conversion. This tool will source all the library dependencies required to run OpenPHT and bundle them into the same `.AppImage` package. Repackaging this way will allow OpenPHT to run on most Linux distributions without the need for rebuilding OpenPHT from sources.
+We will be using the [`pkg2appimage`](https://docs.appimage.org/packaging-guide/converting-binary-packages/pkg2appimage.html) script, provided by the AppImage project, to perform the conversion. The tools provided here will automatically download `pkg2appimage` and then use it to source all the library dependencies required to run OpenPHT and bundle them into the same `.AppImage` package. Repackaging this way will allow OpenPHT to run on most Linux distributions without the need for rebuilding OpenPHT from sources.
 
 Programming knowledge is not a requirement for getting the conversion to work, unless you plan to modify or develop this project yourself. In that case, check out the official [AppImage documentation pages](https://docs.appimage.org/); the information therein might be useful.
 
