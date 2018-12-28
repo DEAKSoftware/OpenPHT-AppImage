@@ -31,7 +31,7 @@ File or Directory | Description
 
 2. Find the output file at `./Build/out/OpenPHT*.AppImage` and copy it to a [location of your choice](https://docs.appimage.org/user-guide/faq.html#question-where-do-i-store-my-appimages).
 
-3. As a test, run the `OpenPHT*.AppImage` executable from a terminal, and watch the terminal output for error messages. The OpenPHT log file at `~/.plexht/temp/plexhometheater.log` might also give you clues for errors. If the app does not run, the most likely reason will be related to a library missing from the `.AppImage` package. Make an issue on this repo, and we'll see what we can do about it.
+3. As a test, run the `OpenPHT*.AppImage` executable from a terminal, and watch the terminal output for error messages. The OpenPHT log file at `~/.plexht/temp/plexhometheater.log` might also give you clues for errors. If the app does not run, the most likely reason will be related to a library missing from the `.AppImage` package. Make an issue on this repo, and we'll see what we can do about it. Better still, create a pull request if you have solution for a fix.
 
 ### Migrating OpenPHT Configuration
 
