@@ -2,6 +2,11 @@
 ## OpenPHT `.deb` to `.AppImage` Conversion Tool
 
 
+### Releases
+
+* [OpenPHT-1.8.0.148.glibc2.15-x86_64.AppImage](https://github.com/DEAKSoftware/OpenPHT-AppImage/releases/tag/1.8.0.148) - Runs on Ubuntu 14.04 LTS (Trusty Tahr) and newer.
+
+
 ### About
 
 This project will attempt to convert an [OpenPHT](https://github.com/RasPlex/OpenPHT) binary release, packaged in the `.deb` format, into an [`.AppImage` package](https://appimage.org/).
