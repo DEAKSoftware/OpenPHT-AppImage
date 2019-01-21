@@ -14,6 +14,8 @@ Describe what you expected to happen after completing the steps above.
 
 Describe what actually happened after completing the steps above.
 
-### Additional Notes
+### OpenPHT Logs / Additional Notes
 
-Provide additional information, such as references to related problems or workarounds. 
+* Provide additional information, such as references to related problems or workarounds.
+* Include OpenPHT logs in this section, which can be located at: `~/.plexht/temp/plexhometheater.log`.
+* If a log file is not available, run OpenPHT in a terminal and include the error messages here.
