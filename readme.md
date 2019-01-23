@@ -4,7 +4,7 @@
 
 ### Releases
 
-* [OpenPHT 1.8.0.148 — Ubuntu 14.04 LTS (Trusty Tahr)](https://github.com/DEAKSoftware/OpenPHT-AppImage/releases/tag/1.8.0.148) 
+* [OpenPHT 1.8.0.148 — Ubuntu 14.04 LTS (Trusty Tahr)](https://github.com/DEAKSoftware/OpenPHT-AppImage/releases/tag/1.8.0.148.trusty) 
 
 ### About
 
