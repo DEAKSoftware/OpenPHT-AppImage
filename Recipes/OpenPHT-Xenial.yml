@@ -1,0 +1,28 @@
+app: OpenPHT
+
+ingredients:
+  dist: xenial
+  sources:
+    - deb http://security.ubuntu.com/ubuntu/ xenial main universe
+    - deb http://archive.ubuntu.com/ubuntu/ xenial main universe
+  script:
+    - wget -c https://github.com/RasPlex/OpenPHT/releases/download/v1.8.0.148-573b6d73/openpht_1.8.0.148-573b6d73-xenial_amd64.deb
+    - wget -c http://security.ubuntu.com/ubuntu/pool/main/c/curl/libcurl3_7.55.1-1ubuntu2_amd64.deb
+
+script:
+  # Replace original openpht shell script with the modified version that works with relative paths
+  - cat > ./usr/bin/openpht <<\EOF
+  - #!/bin/bash
+  - SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+  - export LD_LIBRARY_PATH="${SCRIPT_PATH}/../lib/openpht/system/players/dvdplayer":$LD_LIBRARY_PATH
+  - export XBMC_HOME=${SCRIPT_PATH}/../share/openpht
+  - exec ${SCRIPT_PATH}/../lib/openpht/plexhometheater "$@"
+  - EOF
+  - chmod +x ./usr/bin/openpht
+
+  # Replace some old XBMC icons with OpenPHT logo; requires imagemagick to be installed
+  - command -v convert >/dev/null 2>&1 && convert ./openpht.png -resize 32x32 ./usr/share/openpht/media/icon32x32.png
+  - command -v convert >/dev/null 2>&1 && convert ./openpht.png -resize 120x120 ./usr/share/openpht/media/icon-flat-120x120.png
+  - command -v convert >/dev/null 2>&1 && convert ./openpht.png -resize 256x256 ./usr/share/openpht/media/icon-flat-256x256.png
+  - command -v convert >/dev/null 2>&1 && convert ./openpht.png -resize 256x256 ./usr/share/openpht/media/AppIcon.png
+  - command -v convert >/dev/null 2>&1 && convert ./openpht.png -resize 256x256 ./usr/share/openpht/media/icon.png

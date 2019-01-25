@@ -4,13 +4,7 @@
 
 ### Releases
 
-Pre-converted `.AppImage` binaries:
-
-* [OpenPHT 1.8.0.148 — Ubuntu 16.04 LTS (Xenial Xerus)](https://github.com/DEAKSoftware/OpenPHT-AppImage/releases/tag/1.8.0.148.xenial)
-
-Builds no longer supported:
-
-* [OpenPHT 1.8.0.148 — Ubuntu 14.04 LTS (Trusty Tahr)](https://github.com/DEAKSoftware/OpenPHT-AppImage/releases/tag/1.8.0.148.trusty) 
+* [OpenPHT 1.8.0.148](https://github.com/DEAKSoftware/OpenPHT-AppImage/releases/tag/1.8.0.148)
 
 ### About
 
@@ -30,16 +24,22 @@ The following files or directories should be of interest:
 File or Directory | Description
 --- | ---
 [`Build`](./Build) | Location where the AppImage will be built. All intermediate files will be generated and stored in there.
-[`Recipe/OpenPHT.yml`](./Recipe/OpenPHT.yml) | The recipe file used by `pkg2appimage` to perform the converion. The recipe is hard coded to source only one of the OpenPHT 1.8.0 `.deb` packages. See the `OpenPHT.yml` file for details.
-[`Recipe/openpht`](./Recipe/openpht) | Custom `openpht` shell script that will be bundled in the `.AppImage`, at location `./usr/bin` (relative inside the package). This is a modified version of the original shell script; the changes will allow `openpht` to resolve the `plexhometheater` binary using relative paths.
+[`Recipes`](./Recipes) | Collection of recipes used by `pkg2appimage` to perform the converion. The recipe is hard coded to source only one of the OpenPHT 1.8.0 `.deb` packages. See each respective `.yml` file for details.
 [`make_appimage.sh`](./make_appimage.sh) | Convenience utility that performs the conversion.
 
+### Prerequisites
+
+In order to process some of the OpenPHT icons, we need to install ImageMagick:
+
+```sh
+sudo apt-get install imagemagick
+```
 
 ### Making an `.AppImage` Package
 
-1. Run the `./make_appimage.sh` utility to fetch the OpenPHT `.deb` package and its dependencies. Hopefully all dependencies can be resolved.
+1. Run the utility `./make_appimage.sh --xenial` to fetch the OpenPHT `.deb` package for Ubuntu 16.04 LTS (Xenial Xerus) distribution and its dependencies. You can specify other distributions, see the `--help` option for details.
 
-2. Find the output file at `./Build/out/OpenPHT*.AppImage` and copy it to a [location of your choice](https://docs.appimage.org/user-guide/faq.html#question-where-do-i-store-my-appimages).
+2. Find the output file at `./Build/OpenPHT*.AppImage` and copy it to a [location of your choice](https://docs.appimage.org/user-guide/faq.html#question-where-do-i-store-my-appimages).
 
 3. As a test, run the `OpenPHT*.AppImage` executable from a terminal, and watch the terminal output for error messages. The OpenPHT log file at `~/.plexht/temp/plexhometheater.log` might also give you clues for errors. If the app does not run, the most likely reason will be related to a library missing from the `.AppImage` package. Make an issue on this repo, and we'll see what we can do about it. Better still, create a pull request if you have solution for a fix.
 
