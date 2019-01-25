@@ -66,7 +66,7 @@ elif [ "${1}" = "--all" ]; then
 
 else
 
-	echo "error: Bad or unknown options. Run with '--help' option for details."
+	echo "error: Bad or unknown option. Run with '--help' option for details."
 	exit 1
 
 fi
