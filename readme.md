@@ -24,7 +24,7 @@ The following files or directories should be of interest:
 File or Directory | Description
 --- | ---
 [`Build`](./Build) | Location where the AppImage will be built. All intermediate files will be generated and stored in there.
-[`Recipes`](./Recipes) | Collection of recipes used by `pkg2appimage` to perform the converion. The recipe is hard coded to source only one of the OpenPHT 1.8.0 `.deb` packages. See each respective `.yml` file for details.
+[`Recipes`](./Recipes) | Collection of recipes used by `pkg2appimage` to perform the conversion. The recipe is hard coded to source only one of the OpenPHT 1.8.0 `.deb` packages. See each respective `.yml` file for details.
 [`make_appimage.sh`](./make_appimage.sh) | Convenience utility that performs the conversion.
 
 ### Prerequisites
@@ -34,6 +34,8 @@ In order to process some of the OpenPHT icons, we need to install ImageMagick:
 ```sh
 sudo apt-get install imagemagick
 ```
+Installation of ImageMagick is optional. If missing, the icon conversion stage will be skipped.
+
 
 ### Making an `.AppImage` Package
 
