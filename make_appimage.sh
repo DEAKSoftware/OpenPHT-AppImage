@@ -7,7 +7,7 @@ makeAppImage() {
 
 	clear
 
-	mkdir Build; cd Build
+	mkdir Build; pushd Build
 	mkdir ${distroName}; pushd ${distroName}
 
 	wget -c https://raw.githubusercontent.com/AppImage/pkg2appimage/master/pkg2appimage || exit 1
@@ -22,7 +22,8 @@ makeAppImage() {
 
 	mv -f out/*.AppImage ..
 
-	popd
+	popd # ${distroName}
+	popd # Build
 }
 
 
@@ -37,7 +38,7 @@ if [ "${1}" = "--help" ] || [ "${1}" = "-h" ]; then
 
 	printf "NAME\n\t${0} - Build an OpenPHT AppImage\n\n"
 	printf "SYNOPSIS\n\t${0} [OPTION]\n\n"
-	printf "DESCRIPTION\n\tBuild an OpenPHT AppImage using a deb package for specific Linux distribution.\n\n\tSpecifying a distribution is mandatory.\n\n"
+	printf "DESCRIPTION\n\tBuild an OpenPHT AppImage using a deb package for a specific Linux distribution.\n\n\tSpecifying a distribution is mandatory.\n\n"
 	printf "\t-h, --help\n\tDisplay this help message.\n\n"
 	printf "\t--jessie\n\tMake an AppImage using the 'Jessie' deb package.\n\n"
 	printf "\t--trusty\n\tMake an AppImage using the 'Trusty' deb package. Note, support for this is limited and may not run on some platforms.\n\n"
