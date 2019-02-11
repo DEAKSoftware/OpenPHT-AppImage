@@ -2,7 +2,7 @@
 ## OpenPHT `.deb` to `.AppImage` Conversion Tool
 
 
-### Releases
+### AppImage Releases
 
 * [OpenPHT 1.8.0.148](https://github.com/DEAKSoftware/OpenPHT-AppImage/releases/tag/1.8.0.148)
 
