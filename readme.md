@@ -49,7 +49,7 @@ Installation of ImageMagick is optional. If missing, the icon conversion stage w
 
 This section might be useful to you if you plan to migrate OpenPHT configuration data to your Linux platform. Otherwise, you can skip this section and run OpenPHT with default settings.
 
-1. If OpenPHT was first run without issues, it will automatically create its default configuration data at the path `~/.plexht`. To migrate an existing OpenPHT configuration data over, close OpenPHT, then simply copy and replace the contents of `~/.plexht` with the other one. The source configuration could be obtained from a Windows, or a macOS installation, it doesn't really matter.
+1. If OpenPHT was first run without issues, it will automatically create its default configuration data at the path `~/.plexht`. To migrate an existing OpenPHT configuration data over, close OpenPHT, then simply copy and replace the contents of `~/.plexht` originating from another source. The source configuration could be obtained from a Windows, or a macOS installation, it doesn't really matter.
 
 2. Once the configuration files were copied over, edit the file `~/.plexht/userdata/guisettings.xml` and create a new device name for the OpenPHT instance. Search for the `<devicename>` tags and change it to whatever appropriate; the computer name is usually sufficient:
 
