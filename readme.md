@@ -1,6 +1,7 @@
 
 ## OpenPHT `.deb` to `.AppImage` Conversion Tool
 
+⚠️ **NOTE:** This project is no longer maintained and is now archived.
 
 ### `.AppImage` Releases
 
